@@ -7,7 +7,6 @@ import { useState } from "react";
 import useSignup from "../../hooks/useSignup";
 
 const Signup = () => {
-
   const [inputs, setInputs] = useState({
     fullName: "",
     username: "",
@@ -19,7 +18,7 @@ const Signup = () => {
   const { loading, signup } = useSignup();
 
   const handleGenderSelect = (gender) => {
-    setInputs({...inputs, gender});
+    setInputs({ ...inputs, gender });
   };
 
   const handleSubmit = async (e) => {
@@ -47,7 +46,9 @@ const Signup = () => {
                 className="grow"
                 placeholder="Enter your full name"
                 value={inputs.fullName}
-                onChange={(e) => setInputs({...inputs, fullName: e.target.value})}
+                onChange={(e) =>
+                  setInputs({ ...inputs, fullName: e.target.value })
+                }
               />
             </label>
           </div>
@@ -62,7 +63,9 @@ const Signup = () => {
                 className="grow"
                 placeholder="Enter your username"
                 value={inputs.username}
-                onChange={(e) => setInputs({...inputs, username: e.target.value})}
+                onChange={(e) =>
+                  setInputs({ ...inputs, username: e.target.value })
+                }
               />
             </label>
           </div>
@@ -77,7 +80,9 @@ const Signup = () => {
                 className="grow"
                 placeholder="Enter a password"
                 value={inputs.password}
-                onChange={(e) => setInputs({...inputs, password: e.target.value})}
+                onChange={(e) =>
+                  setInputs({ ...inputs, password: e.target.value })
+                }
               />
             </label>
           </div>
@@ -92,13 +97,18 @@ const Signup = () => {
                 className="grow"
                 placeholder="Confirm your password"
                 value={inputs.confirmPassword}
-                onChange={(e) => setInputs({...inputs, confirmPassword: e.target.value})}
+                onChange={(e) =>
+                  setInputs({ ...inputs, confirmPassword: e.target.value })
+                }
               />
             </label>
           </div>
 
           {/* GENDER SELECT GOES HERE */}
-          <GenderSelect onGenderSelect = {handleGenderSelect} selectedGender={inputs.gender} />
+          <GenderSelect
+            onGenderSelect={handleGenderSelect}
+            selectedGender={inputs.gender}
+          />
           <Link
             to={"/login"}
             className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
@@ -106,7 +116,13 @@ const Signup = () => {
             Already have an account?
           </Link>
           <div>
-            <button className="btn btn-block btn-sm mt-2">Signup</button>
+            <button className="btn btn-block btn-sm mt-2" disabled={loading}>
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Sign Up"
+              )}
+            </button>
           </div>
         </form>
       </div>
