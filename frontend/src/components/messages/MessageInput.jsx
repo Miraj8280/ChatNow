@@ -20,7 +20,7 @@ const MessageInput = () => {
       <div className="w-full relative">
         <input
           type="text"
-          className="border text-sm rounded-lg block w-full p-2.5  bg-gray-700 border-gray-600 text-white"
+          className="text-sm rounded-lg block w-full p-2.5 outline-none shadow-md bg-slate-200"
           placeholder="Send a message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -32,7 +32,7 @@ const MessageInput = () => {
           {loading ? (
             <div className="loading loading-spinner"></div>
           ) : (
-            <IoSend className="w-5 h-5 text-gray-400" />
+            <IoSend className="w-5 h-5 text-slate-500" />
           )}
         </button>
       </div>

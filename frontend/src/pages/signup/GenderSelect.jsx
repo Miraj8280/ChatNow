@@ -3,7 +3,7 @@ const GenderSelect = ({ onGenderSelect, selectedGender }) => {
     <div className="flex">
       <div className="form-control">
         <label className="label gap-2 cursor-pointer"> 
-          <span className="label-text">Male</span>
+          <span className="label-text text-slate-600 font-semibold">Male</span>
           <input
             type="radio"
             name="radio-4"
@@ -15,7 +15,7 @@ const GenderSelect = ({ onGenderSelect, selectedGender }) => {
       </div>
       <div className="form-control">
         <label className="label gap-2 cursor-pointer">
-          <span className="label-text">Female</span>
+          <span className="label-text text-slate-600 font-semibold">Female</span>
           <input
             type="radio"
             name="radio-4"

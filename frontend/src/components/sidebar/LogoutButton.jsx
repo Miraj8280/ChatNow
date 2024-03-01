@@ -7,7 +7,7 @@ const LogoutButton = () => {
     <div className="mt-auto">
       {!loading ? (
         <RiLogoutCircleLine
-          className="w-6 h-6 mt-2 text-white cursor-pointer"
+          className="w-6 h-6 mt-2 cursor-pointer"
           onClick={logout}
         />
       ) : (

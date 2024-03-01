@@ -3,24 +3,21 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("/bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+	background-color: #f1f5f9;
 }
 
 /* dark mode looking scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #555;
+  background: #c9c9c9;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #121212;
+  background: #747474;
   border-radius: 5px;
 }
 
@@ -58,3 +55,5 @@ body {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+
