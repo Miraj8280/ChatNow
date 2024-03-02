@@ -4,6 +4,7 @@
 
 body {
 	background-color: #f1f5f9;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* dark mode looking scrollbar */
@@ -56,4 +57,9 @@ body {
   }
 }
 
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
 
