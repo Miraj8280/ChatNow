@@ -3,6 +3,7 @@ import { useAuthContext } from "./AuthContext";
 import io from "socket.io-client";
 
 const SocketContext = createContext();
+// eslint-disable-next-line react-refresh/only-export-components
 export const useSocketContext = () => {
     return useContext(SocketContext);
 }
@@ -14,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (authUser) {
-            const socket = io("http://localhost:5000", {
+            const socket = io("https://chatnow-tsej.onrender.com", {
                 query: {
                     userId: authUser._id,
                 }
